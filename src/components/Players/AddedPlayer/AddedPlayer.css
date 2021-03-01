@@ -1,0 +1,10 @@
+.cart-calculation {
+  color: green;
+}
+.each-cart-detail {
+  color: white;
+  border: 1px solid green;
+  background-color: green;
+  width: 400px;
+  padding: 20px;
+}
