@@ -1,16 +1,22 @@
 .bpl-logo {
-  height: 280px;
+  height: 300px;
   border-bottom: 2px solid yellow;
   /* margin: 10px; */
   padding-top: 10px;
   cursor: grabbing;
   text-align: center;
+
+  background-image: url("../../../images/stadium\ \(1\).png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.bpl-logo:hover {
-  max-zoom: 5px;
-  background-color: yellow;
-}
-.bpl-logo img:hover {
+
+.bpl-logo:hover img {
   transform: scale(1.1);
   transition: transform 0.5s;
+}
+.bpl-logo img {
+  text-decoration: none;
 }

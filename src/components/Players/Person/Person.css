@@ -17,3 +17,19 @@
 .detail-style {
   color: darkgray;
 }
+.cart-btn {
+  height: 40px;
+  width: 150px;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 20px;
+  padding: 10px;
+}
+.person-detail button:hover {
+  background-color: green;
+  cursor: pointer;
+}

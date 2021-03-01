@@ -5,7 +5,12 @@ import Person from "./Person/Person";
 
 const Players = () => {
   const [players, setPlayers] = useState(data);
-//   console.log(data);
+  //   console.log(data);
+  const handleAddPlayer = (player) => {
+    console.log("person added", player);
+    const { name, role, salary } = player;
+    console.log(name);
+  };
   return (
     <div>
       <h2>This is players</h2>
@@ -13,11 +18,15 @@ const Players = () => {
       <div className="players-container">
         <div className="person-container">
           {players.map((player) => (
-            <Person player={player} key={player.id}></Person>
+            <Person
+              handleAddPlayer={handleAddPlayer}
+              player={player}
+              key={player.id}
+            ></Person>
           ))}
         </div>
         <div className="cart-container">
-          <h2>This is cart</h2>
+          <h2>This is cart </h2>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import logo from "../../../../src/images/BPLLogo.png";
 const Header = () => {
   return (
     <div className="bpl-logo">
-      <img src={logo} alt="" />
+      <img className="logo-style" src={logo} alt="" />
     </div>
   );
 };
