@@ -1,0 +1,15 @@
+.players-container {
+  display: flex;
+}
+.person-container {
+  width: 65%;
+  margin: 6px;
+  padding: 10px;
+  border-right: 1.5px solid red;
+  border-bottom: 1.5px solid green;
+}
+.cart-container {
+  width: 35%;
+  margin-left: 20px;
+  padding: 10px;
+}
