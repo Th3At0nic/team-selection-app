@@ -47,6 +47,9 @@ function Player(properties) {
     <div>
       <h2>Name: </h2>
       <h2>Age: </h2>
+      <h2>Country: </h2>
+      <h2>Role: </h2>
+      <h2>Price: </h2>
       <br />
       <br />
     </div>
