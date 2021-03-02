@@ -6,8 +6,8 @@ import Players from "./components/Players/Players";
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <Players></Players>
+      <Header></Header> {/*from header component */}
+      <Players></Players> {/*from players component */}
     </div>
   );
 }

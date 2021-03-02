@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import "./AddedPlayer.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; //importing bootstrap
 
 const AddedPlayer = (props) => {
   const playerList = props.addedPlayer;
-  const players = [];
   var prices = [];
   var names = [];
   let total = 0;
   for (let i = 0; i < playerList.length; i++) {
     var eachPlayer = playerList[i];
     total += eachPlayer.salary;
-    var { name, country, role, salary: arobi, age } = eachPlayer;
-    players.push(eachPlayer);
     const playerName = eachPlayer.name;
     const salary = eachPlayer.salary;
     prices.push(salary);
@@ -22,10 +19,11 @@ const AddedPlayer = (props) => {
     <div>
       <div className="added-player-price">
         <ul>
+          {/* calling function from the below of this same component */}
           <EachCart
             price={prices.map((price) => (
               <li>{price} BDT</li>
-            ))}
+            ))} //mapping on prices & names from line nmbr 7 & 8.
             name={names.map((name) => (
               <li>{name}</li>
             ))}

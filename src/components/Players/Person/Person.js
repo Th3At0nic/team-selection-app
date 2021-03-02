@@ -1,7 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; //importing icon from fontawesome.
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-
 import "./Person.css";
 
 const Person = (props) => {
