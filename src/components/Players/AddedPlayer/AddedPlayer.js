@@ -3,17 +3,13 @@ import "./AddedPlayer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const AddedPlayer = (props) => {
-  console.log(props.addedPlayer);
   const playerList = props.addedPlayer;
-  console.log(playerList);
-
   const players = [];
   var prices = [];
   var names = [];
   let total = 0;
   for (let i = 0; i < playerList.length; i++) {
     var eachPlayer = playerList[i];
-    console.log(eachPlayer);
     total += eachPlayer.salary;
     var { name, country, role, salary: arobi, age } = eachPlayer;
     players.push(eachPlayer);
@@ -21,13 +17,7 @@ const AddedPlayer = (props) => {
     const salary = eachPlayer.salary;
     prices.push(salary);
     names.push(playerName);
-    console.log(names);
-    console.log(prices);
   }
-  console.log(prices);
-
-  console.log(players);
-
   return (
     <div>
       <div className="added-player-price">

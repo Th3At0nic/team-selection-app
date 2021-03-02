@@ -5,7 +5,6 @@ import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import "./Person.css";
 
 const Person = (props) => {
-  console.log(props);
   const handleAddPlayer = props.handleAddPlayer;
   const { name, country, img, salary, age, role } = props.player;
   return (
