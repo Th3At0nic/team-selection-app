@@ -8,3 +8,16 @@
   width: 400px;
   padding: 20px;
 }
+
+.cart-display {
+  display: flex;
+}
+.added-name {
+  margin-right: 70px;
+}
+.added-player-price {
+  color: white;
+  border: 1px solid green;
+  background-color: green;
+  width: 100%;
+}

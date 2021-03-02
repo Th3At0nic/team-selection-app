@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Separate from "../../Separate/Separate";
 import "./AddedPlayer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const AddedPlayer = (props) => {
   console.log(props.addedPlayer);
@@ -8,49 +8,63 @@ const AddedPlayer = (props) => {
   console.log(playerList);
 
   const players = [];
+  var prices = [];
+  var names = [];
   let total = 0;
   for (let i = 0; i < playerList.length; i++) {
     var eachPlayer = playerList[i];
     console.log(eachPlayer);
     total += eachPlayer.salary;
-    var { name, country, role, salary, age } = eachPlayer;
+    var { name, country, role, salary: arobi, age } = eachPlayer;
     players.push(eachPlayer);
+    const playerName = eachPlayer.name;
+    const salary = eachPlayer.salary;
+    prices.push(salary);
+    names.push(playerName);
+    console.log(names);
+    console.log(prices);
   }
+  console.log(prices);
 
-  //   let total = playerList.reduce(((total, player) => total + player.salary, 0));
+  console.log(players);
 
   return (
     <div>
-      <div className="each-cart-detail">
-        {/* <h4>Name: {name}</h4>
-        <h4>Country: {country}</h4>
-        <h4>Role: {role}</h4>
-        <h4>Cost: {salary}</h4> */}
-        <Separate players={players}></Separate>
+      <div className="added-player-price">
+        <ul>
+          <EachCart
+            price={prices.map((price) => (
+              <li>{price} BDT</li>
+            ))}
+            name={names.map((name) => (
+              <li>{name}</li>
+            ))}
+          ></EachCart>
+        </ul>
       </div>
       <br />
       <br />
       <div className="cart-calculation">
         <h2>Player added: {playerList.length}</h2>
-        <h2>Team Value: {total}৳</h2>
+        <h2>Total Team Value: {total}৳</h2>
       </div>
     </div>
   );
 };
-// function Separate(properties) {
-//   console.log(properties);
-//   const { name, age } = properties;
-//   //   console.log(name);
-//   //   const [] = properties;
-//   //   console.log(name, country);
-//   return (
-//     <div>
-//       <h2>Name: {name} </h2>
-//       <h2>Age: </h2>
-//       <br />
-//       <br />
-//     </div>
-//   );
-// }
+function EachCart(properties) {
+  let name = properties.name;
+  let salary = properties.price;
+  return (
+    <div>
+      <h1 className="text-warning text-center">Your team and values</h1>
+      <div className="cart-display">
+        <h2 className="added-name">Name: {name}</h2>
+        <h2>Cost: {salary}</h2>
+      </div>
+      <br />
+      <br />
+    </div>
+  );
+}
 
 export default AddedPlayer;
