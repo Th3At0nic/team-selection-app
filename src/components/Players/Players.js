@@ -6,12 +6,16 @@ import Person from "./Person/Person";
 import AddedPlayer from "./AddedPlayer/AddedPlayer";
 
 const Players = () => {
-  const [players, setPlayers] = useState(data);
+  const [players, setPlayers] = useState([]);
   const [addPlayer, setAddPlayer] = useState([]);
   const handleAddPlayer = (player) => {
     const newAdded = [...addPlayer, player];
     setAddPlayer(newAdded);
   };
+
+  useEffect(() => {
+    setPlayers(data);
+  }, []);
 
   return (
     <div>
@@ -36,6 +40,4 @@ const Players = () => {
 };
 export default Players;
 
-// sorry, i tried my best but failed to use useEffect,
-//i was not getting data after fatching local json file. thats why i didnt use useEffect.
-// thank you..
+//thank you.
