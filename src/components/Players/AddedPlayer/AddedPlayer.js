@@ -6,14 +6,28 @@ const AddedPlayer = (props) => {
   const playerList = props.addedPlayer;
   var prices = [];
   var names = [];
-  let total = 0;
+
   for (let i = 0; i < playerList.length; i++) {
     var eachPlayer = playerList[i];
-    total += eachPlayer.salary;
+
     const playerName = eachPlayer.name;
     const salary = eachPlayer.salary;
-    prices.push(salary);
-    names.push(playerName);
+
+    if (names.indexOf(playerName) === -1) names.push(playerName); //to prevent duplicate values,u cant add same player multiple times
+    if (prices.indexOf(salary) === -1) prices.push(salary); //preventing duplicates.
+  }
+
+  let total = 0;
+  for (let i = 0; i < prices.length; i++) {
+    const eachSalary = prices[i];
+
+    total = total + eachSalary;
+  }
+
+  let addedPlayer = 0;
+  for (let i = 0; i < names.length; i++) {
+    const selected = names[i];
+    addedPlayer = addedPlayer + 1;
   }
   return (
     <div>
@@ -33,7 +47,7 @@ const AddedPlayer = (props) => {
       <br />
       <br />
       <div className="cart-calculation">
-        <h2>Player added: {playerList.length}</h2>
+        <h2>Player added: {addedPlayer}</h2>
         <h2>Total Team Value: {total}৳</h2>
       </div>
     </div>
