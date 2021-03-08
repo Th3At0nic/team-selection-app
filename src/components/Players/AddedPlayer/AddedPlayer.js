@@ -13,7 +13,8 @@ const AddedPlayer = (props) => {
     const playerName = eachPlayer.name;
     const salary = eachPlayer.salary;
 
-    if (names.indexOf(playerName) === -1) names.push(playerName); //to prevent duplicate values,u cant add same player multiple times
+    if (names.indexOf(playerName) === -1) names.push(playerName);
+    //to prevent duplicate values,u cant add same player multiple times
     if (prices.indexOf(salary) === -1) prices.push(salary); //preventing duplicates.
   }
 
